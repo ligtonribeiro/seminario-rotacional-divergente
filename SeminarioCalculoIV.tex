@@ -1,0 +1,42 @@
+\documentclass[serif]{beamer}
+\usetheme{Madrid}
+\usepackage[utf8]{inputenc}
+\usepackage{import, ragged2e, graphicx, enumerate, subfigure}
+\usepackage{multicol, xcolor, amsmath, amsthm, array}
+\usepackage{hyperref}
+
+\newtheorem{mydef}{Definicão}
+% Aling justify \item Itemize
+\let\olditem\item
+\renewcommand\item{\olditem\justifying}
+
+% Título da Apresentação
+\title{Cálculo IV}
+\subtitle{Rotacional e Divergente}
+\author{Leidivania / Mirely / Wellington}
+\institute[]{Instituto Federal de Ciência e Tecnologia do Ceará - IFCE}
+\date{Agosto - 2021}
+
+% Índice da Apresentação
+% \AtBeginSection[]
+% {
+%     \begin{frame}
+%         \frametitle{Índice}
+%         \tableofcontents[currentsection]
+%     \end{frame}
+% }
+
+\begin{document}
+\frame{\titlepage}
+\begin{frame}
+    \frametitle{Índice}
+    \tableofcontents
+\end{frame}
+
+\include{slides/slide1}
+\include{slides/slide2}
+\include{slides/slide3}
+\include{slides/slide4}
+\include{slides/slide5}
+
+\end{document}

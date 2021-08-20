@@ -1,0 +1,111 @@
+\section{Interpretação física do divergente}
+\begin{frame}
+    \frametitle{Interpretação física do divergente}
+    A divergência mede a mudança na densidade de um liquido escoando de acordo com um dado campo vetorial.
+    
+    \begin{itemize}
+        \item Interprete um campo vetorial como representando o escoamento de um fluido.
+        \item A divergência é um operador que tem como entrada a função vetorial que define esse campo e dá como saída um função escalar que mede a variação da densidade do fluido em cada ponto do campo.
+        \item Fórmulo da divergência:
+              \begin{equation*}
+                  div \vec{F} = \nabla \cdot \vec{F} = \dfrac{\partial F_1}{\partial x}+\dfrac{\partial F_2}{\partial y}+ \cdots
+              \end{equation*}
+        \item Onde, $F_1, F_2, \ldots$ são funções componentes de $\vec{F}$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Interpretação física do divergente}
+    Digamos que, ao calcular a divergência de um função $\vec{F}$ em um certo ponto $(x_0,y_0)$, encontramos um valor negativo.
+    \vspace{2mm}
+    
+    \begin{equation*}
+        \nabla \cdot \vec{F}(x_0,y_0) < 0
+    \end{equation*}
+    \vspace{2mm}
+    
+    Isso significa que um fluido escoando segundo o campo vetorial definido por $\vec{F}$ tenderia a ficar \textbf{mais denso} no ponto $(x_0,y_0)$.
+    \vspace{5mm}
+    
+    \textbf{Animação de um campo com divergência negativa na origem:}
+    \begin{itemize}
+        \item \href{https://www.youtube.com/watch?v=rqnTQyO4GY4}{Divergente Negativo}
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Interpretação física do divergente}
+    Por outro lado, se a divergência no ponto $(x_0,y_0)$ for positiva,
+    \vspace{2mm}
+    
+    \begin{equation*}
+        \nabla \cdot \vec{F}(x_0,y_0) > 0
+    \end{equation*}
+    \vspace{2mm}
+    
+    o fluido escoando de acordo com o campo vetorial se torna menos denso ao redor de $(x_0,y_0)$.
+    \vspace{5mm}
+    
+    \textbf{Animação de um campo com divergência positiva:}
+    \begin{itemize}
+        \item \href{https://www.youtube.com/watch?v=_mwMoEwwkvc}{Divergente Positivo}
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Interpretação física do divergente}
+    Por fim, o conceito de divergência nula, ele indica que até mesmo se um fluido estiver escoando livremente, sua densidade se mantêm constante. Conveniente quando se modela fluido incompressível, como a água.
+    \vspace{2mm}
+    
+    \begin{equation*}
+        \nabla \cdot \vec{F} = 0
+    \end{equation*}
+    \vspace{2mm}
+    
+    Tais campos vetoriais são chamados de "divergência nula".
+    \vspace{5mm}
+    
+    \textbf{Animação de como o campo deve se parecer:}
+    \begin{itemize}
+        \item \href{https://www.youtube.com/watch?v=TC9MP-y1s_c}{Fluido incompressível}
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Fontes e Sumidouros}
+    \justifying
+    Da mesma forma, ao invés de pensar nos pontos com divergência positiva como se tornando menos densos durante um movimento momentâneo, esses pontos podem ser vistos como "fontes", constantemente gerando mais partículas do fluido.
+    \vspace{3mm}
+    
+    \begin{equation*}
+        \nabla \cdot \vec{F}(x_0,y_0) < 0
+    \end{equation*}
+    \vspace{3mm}
+    
+    \textbf{Animação de como deve ser a aparência de sumidouros}
+    \begin{itemize}
+        \item \href{https://www.youtube.com/watch?v=4I5R4zhOzmU}{Sumidouros}
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Fontes e Sumidoros}
+    \justifying
+    Às vezes, nos pontos com divergência negativa, ao invés de pensar em um fluido ficando mais denso após um movimento momentâneo, algumas pessoas imaginam o fluido sendo drenado naquele ponto enquanto o fluido escoa constantemente.
+    \vspace{3mm}
+    
+    \begin{equation*}
+        \nabla \cdot \vec{F}(x_0,y_0) > 0
+    \end{equation*}
+    \vspace{3mm}
+    
+    \textbf{Animação de como deve ser a aparência de fontes}
+    \begin{itemize}
+        \item \href{https://www.youtube.com/watch?v=mBoezvLrUGw}{Fontes}
+    \end{itemize}
+    
+\end{frame}

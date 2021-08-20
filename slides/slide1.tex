@@ -1,0 +1,203 @@
+\section{Campo Vetorial em $R^3$}
+\begin{frame}
+    \frametitle{Campo Vetorial em $R^3$}
+    \begin{mydef}
+        Um campo vetorial no $\mathbb{R}^3$ é um aplicação $F: \Omega \rightarrow \mathbb{R}^3$, onde $\Omega \subset \mathbb{R}^3$.
+    \end{mydef}
+    \vspace{3mm}
+    
+    Nesse caso, o campo vetorial pode ser escrito em termos de suas componentes $P, Q, R$ da seguinte forma:
+    
+    \begin{equation*}
+        F(x, y, z) = P(x, y, z) \vec{i} + Q(x, y, z) \vec{j} + R(x, y, z) \vec{k}
+    \end{equation*}
+    
+    Onde, as funções reais de três variáveis $P, Q, R: \Omega$ são as funções componentes do campo vetorial.
+    \vspace{3mm}
+    
+    É importante pensar em campo vetorial em $\mathbb{R}^3$ como uma função que associa, a cada ponto $x, y, z \in \Omega$ um vetor $F(x, y, z)$.
+\end{frame}
+
+\section{Rotacional}
+\begin{frame}
+    \frametitle{Rotacional}
+    \begin{mydef}
+        \justifying
+        Considere um campo vetorial $\vec{F}: \Omega \rightarrow \mathbb{R}^3$, onde $\Omega \subset \mathbb{R}^3$, dado por $\vec{F}(x, y, z) = P(x, y, z)\vec{i} + Q(x, y, z)\vec{j} + R(x, y, z)\vec{k}$, onde $P, Q, R$ admitem derivadas parciais em $\Omega$. O rotacional de $\vec{F}$, indicado por $\nabla \times \vec{F}$ (ou $rot \vec{F}$) é o campo vetorial definido em $\Omega$ dado por:
+    \end{mydef}
+    
+    \begin{equation*}
+        \nabla \times \vec{F} = \left(
+        \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}
+        \right)\vec{i} + \left(
+        \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}
+        \right)\vec{j} + \left(
+        \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}
+        \right)\vec{k}
+    \end{equation*}
+    \vspace{3mm}
+    
+    Onde $\vec{i} = (1, 0, 0), \vec{j} = (0, 1, 0), \vec{k} = (0, 0, 1)$.
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Rotacional}
+    \justifying
+    Na definição do slide anterior, utilizamos o operador $\nabla = \left(
+        \dfrac{\partial}{\partial x},
+        \dfrac{\partial}{\partial y},
+        \dfrac{\partial}{\partial z}
+        \right)$, chamado de operador \textit{Nabla}
+    
+    \begin{align*}
+        \nabla \times \vec{F} & = \left|\begin{array}{ccc}
+            \vec{i}                      & \vec{j}                      & \vec{k}                      \\[2mm]
+            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\[4mm]
+            P                            & Q                            & R
+        \end{array}\right| \\[3mm]
+                              & = \left(
+        \dfrac{\partial R}{\partial y}-\dfrac{\partial Q}{\partial z}
+        \right)\vec{i} + \left(
+        \dfrac{\partial P}{\partial z}-\dfrac{\partial R}{\partial x}
+        \right)\vec{j} + \left(
+        \dfrac{\partial Q}{\partial x}-\dfrac{\partial P}{\partial y}
+        \right)\vec{k}
+    \end{align*}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Rotacional - Exemplos}
+    \justifying
+    \textbf{Exemplo 1:} Seja $\vec{F}(x, y, z)=2x^2y\vec{i}, 3xz\vec{j}, -y\vec{k}$. Neste caso, $P(x, y ,z)=2x^2y, Q(x, y, z)=3xz, R(x, y, z)=-y$. Então,
+    
+    \begin{align*}
+        \nabla \times \vec{F} & = \left|\begin{array}{ccc}
+            \vec{i}                      & \vec{j}                      & \vec{k}                      \\[2mm]
+            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial y} \\[4mm]
+            2x^2y                        & 3xz                          & -y
+        \end{array}\right| \\[3mm]
+                              & = \left(
+        \dfrac{\partial (-y)}{\partial y}
+        \vec{i} +
+        \dfrac{\partial (2x^2y)}{\partial z}
+        \vec{j} +
+        \dfrac{\partial (3xz)}{\partial x}
+        \vec{k}
+        \right)
+        \\[3mm]
+                              & - \left(
+        \dfrac{\partial(-y)}{\partial x}
+        \vec{j} +
+        \dfrac{\partial (3xz)}{\partial z}
+        \vec{i} +
+        \dfrac{\partial (2x^2y)}{\partial y}
+        \vec{k}
+        \right)
+        \\[3mm]
+                              & = (-1-3x)\vec{i} + (3z-2x^2)\vec{k}
+    \end{align*}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Rotacional - Exemplos}
+    \justifying
+    \textbf{Exemplo 2:} Seja $\vec{F}(x,y,z)=(4x+5yz\vec{i}, 5xz\vec{j}, 5xy\vec{k})$. Nesse caso, $P(x,y,z)=4x+5yz, Q(x,y,z)=5xz, R(x,y,z)=5xy$. Então,
+    
+    \begin{align*}
+        \nabla \times \vec{F} & = \left| \begin{array}{ccc}
+            i                            & j                            & k                            \\[2mm]
+            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\[4mm]
+            4x+5yz                       & 5xz                          & 5xy
+        \end{array}\right|                \\[3mm]
+                              & = \left(
+        \dfrac{\partial (5xy)}{\partial y}
+        \vec{i} +
+        \dfrac{\partial (4x+5yz)}{\partial z}
+        \vec{j} +
+        \dfrac{\partial (5xz)}{\partial x}
+        \vec{k}
+        \right)
+        \\[3mm]
+                              & - \left(
+        \dfrac{\partial (5xy)}{\partial x}
+        \vec{j} +
+        \dfrac{\partial (5xz)}{\partial z}
+        \vec{i} +
+        \dfrac{\partial (4x+5yz)}{\partial y}
+        \vec{k}
+        \right)
+        \\[3mm]
+                              & = (5x-5x)\vec{i}+(5y-5y)\vec{j}+(5z-5z)\vec{k} = \vec{0}
+    \end{align*}
+\end{frame}
+
+\section{Divergente}
+\begin{frame}
+    \frametitle{Divergente}
+    \begin{mydef}
+        \justifying
+        Seja $\vec{F}=(P,Q,R)$ um campo vetorial definido em $\Omega \subset \mathbb{R}^3$. Suponha que $P,Q,R$ admitem derivadas parciais em $\Omega$. O divergente de $\vec{F}$, indicado por $\nabla \cdot \vec{F}$ (ou $div \vec{F}$) é o campo vetorial dado por:
+        \begin{equation*}
+            \nabla \cdot \vec{F} = \dfrac{\partial P}{\partial x}+\dfrac{\partial Q}{\partial y}+\dfrac{\partial R}{\partial z}
+        \end{equation*}
+    \end{mydef}
+    
+    A expressão acima é dada por:
+    
+    \begin{align*}
+        \nabla \cdot \vec{F} & = \left(\dfrac{\partial}{\partial x},\dfrac{\partial}{\partial y},\dfrac{\partial}{\partial z}\right) \cdot (P,Q,R) \\[3mm]
+                             & = \dfrac{\partial P}{\partial x}+\dfrac{\partial Q}{\partial y}+\dfrac{\partial R}{\partial z}
+    \end{align*}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Divergente}
+    
+    A definição do slide anterior pode ser generalizada. 
+    \vspace{5mm}
+    
+    Se $\vec{F}=(F_1, F_2, \ldots, F_n)$, então definimos o divergente de $\vec{F}$ por
+    \vspace{3mm}
+    
+    \begin{equation*}
+        \nabla \cdot \vec{F} = \sum\limits_{i=1}^{n} \dfrac{\partial Fi}{\partial xi}.
+    \end{equation*}
+\end{frame}
+
+\section{Divergente - Exemplos}
+\begin{frame}
+    \frametitle{Divergente - Exemplos}
+    \justifying
+    \textbf{Exemplo 1:} Seja $\vec{F}(x,y,z)=(x^2y\vec{i}, 2xy\vec{j}, z^2\vec{k})$. Neste caso, $P(x,y,z)=x^2y, Q(x,y,z)=2xy, R(x,y,z)=z^2$
+    
+    \begin{align*}
+        \nabla \cdot \vec{F} & =\left(
+        \dfrac{\partial}{\partial x}, \dfrac{\partial}{\partial y}, \dfrac{\partial}{\partial z}
+        \right) \cdot (x^2y,2xy,z^2)                                                                                                 \\[3mm]
+                             & = \dfrac{\partial x^2y}{\partial x}+\dfrac{\partial 2xy}{\partial y}+\dfrac{\partial z^2}{\partial z} \\[3mm]
+                             & = 2xy+2x+2z
+    \end{align*}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Divergente - Exemplos}
+    \justifying
+    \textbf{Exemplo 2:} Seja $\vec{F}(x,y,z)=\dfrac{-mMG}{r^3}(x,y,z)$, onde $m, M, G$ são constantes positivas. 
+    
+    Nesse caso, $P(x,y,z)=\dfrac{-mMGx}{r^3}, Q(x,y,z)=\dfrac{-mMGy}{r^3}, R(x,y,z)=\dfrac{-mMGz}{r^3}$
+    
+    \begin{align*}
+        \nabla \cdot \vec{F} & = \left(
+        \dfrac{\partial}{\partial x}, \dfrac{\partial}{\partial y}, \dfrac{\partial}{\partial z}
+        \right) \cdot \left(
+        \dfrac{-mMGx}{r^3}, \dfrac{-mMGy}{r^3}, \dfrac{-mMGz}{r^3}
+        \right)                                                                                                                                                                  \\[2mm]
+                             & = \dfrac{\partial \dfrac{-mMGx}{r^3}}{\partial x}+\dfrac{\partial \dfrac{-mMGy}{r^3}}{\partial y}+\dfrac{\partial \dfrac{-mMGz}{r^3}}{\partial z} \\[2mm]
+                             & = \dfrac{-mMGr^3}{r^6}+\dfrac{-mMGr^3}{r^6}+\dfrac{-mMGr^3}{r^6}                                                                                  \\[2mm]
+                             & = \dfrac{-3mMGr^3}{r^6} = \dfrac{-3mMG}{r^3}
+    \end{align*}
+\end{frame}
